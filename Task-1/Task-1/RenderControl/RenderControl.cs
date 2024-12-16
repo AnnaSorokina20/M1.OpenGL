@@ -38,17 +38,18 @@ namespace Task_1
         private void DrawFigure()
         {
             glLineWidth(5); // Товщина ліній
+
             glBegin(GL_LINE_STRIP);
-            glColor(Color.Blue);
+            glColor(Color.Blue); // Синій контур
 
             // Вершини фігури
-            glVertex2d(-2.5, -2.5);
-            glVertex2d(-2.5, -1.5);
-            glVertex2d(-1.5, 1.5);
-            glVertex2d(-0.5, 1.5);
-            glVertex2d(0.5, -1.5);
-            glVertex2d(0.5, -2.5);
-            glVertex2d(-2.5, -2.5);
+            glVertex2d(-2.5, -2.5); // Ліва нижня
+            glVertex2d(-2.5, -1.5); // Ліва середня
+            glVertex2d(-1.5, 1.5);  // Ліва верхня
+            glVertex2d(-0.5, 1.5);  // Права верхня
+            glVertex2d(0.5, -1.5);  // Права середня
+            glVertex2d(0.5, -2.5);  // Права нижня
+            glVertex2d(-2.5, -2.5); // Ліва нижня (повернення до початку)
 
             glEnd(); // Завершуємо малювання
         }
