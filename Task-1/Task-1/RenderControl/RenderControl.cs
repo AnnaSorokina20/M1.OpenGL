@@ -26,7 +26,7 @@ namespace Task_1
             // Встановлення системи координат
             glLoadIdentity();
             glViewport(0, 0, Width, Height);
-            glOrtho(-3, 7, -3, 2, -1.0, 1.0); // Межі системи координат згідно із завданням
+            glOrtho(-3, 7, -3, 2, -1.0, 1.0); // Межі системи координат згідно із завданням (+0.5 щоб було видно координати)
 
             // Малювання елементів
             DrawAxes();
@@ -38,7 +38,8 @@ namespace Task_1
         private void DrawFigure()
         {
             glLineWidth(5); // Товщина ліній
-            glBegin(GL_LINE_STRIP); // GL_LINE_STRIP, як зазначено у варіанті
+
+            glBegin(GL_LINE_STRIP);
             glColor(Color.Blue); // Синій контур
 
             // Вершини фігури
